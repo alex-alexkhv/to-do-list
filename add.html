@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add_task</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1 id="header">Новая задача</h1>
+    <form class="form" action="/add">
+        <div class="text-field">
+            <label for="task">Введите новую задачу:</label>
+            <input type="text" id="task" name="new_task" placeholder="Новая задача" required>
+        </div>
+        <div class="text-field">
+            <label for="category">Выберите категорию</label>
+            <select name="category" id="category" required>
+                <option value="" selected disabled>Выберите категорию</option>
+                <option value="work">Работа</option>
+                <option value="house">Дом</option>
+                <option value="musik">Музыка</option>
+                <option value="study">обучение</option>
+                <option value="travel">Путешествия</option>
+
+            </select>
+
+        </div>
+        <button class="main-btn" type="submit">ok</button>
+
+    </form>
+
+    <a class="close-btn" href="/">x</a>
+
+</body>
+
+</html>
