@@ -53,15 +53,20 @@ const container = document.getElementById("tasks-list"); //список зада
 for (let index = 0; index < tasks.length; index++) {
     const element = tasks[index];
     // console.log(element.mes)
-    addTask(container, element.mes, function() {
+    function handleDelete() {
         // const arr = tasks.filter(function(task) {
         //     return task.mes !== element.mes
         // })
         const arr = tasks.filter(task => task.mes !== element.mes)
         tasks = arr
         saveTasks(nameCategory, tasks)
-            // saveCategories(categories) //???
-    })
+    }
+    function handleCheck() {
+        element.checked = !element.checked
+        saveTasks(nameCategory, tasks)
+    }
+
+    addTask(container, element.mes, element.checked, handleDelete, handleCheck)
 }
 
 

@@ -41,19 +41,30 @@ function loadCategories() {
     return categories
 }
 
-function addTask(list, taskText, deleteCb) {
+function addTask(list, taskText, checked, deleteCb, checkCb) {
     const li = document.createElement('li')
+    const checkbox = document.createElement('input')
+    checkbox.type = "checkbox"
+    checkbox.classList.add('checkbox')
+    checkbox.checked = checked
     const span = document.createElement('span')
     span.innerText = taskText
+    span.classList.add('name-task')
     const btnDel = document.createElement("button")
-    btnDel.innerText = "удалить"
+    // btnDel.innerText = " "
+    // btnDel.innerText = "удалить"
+    // btnDel.src = "icons/trash.svg"
+    btnDel.classList.add('btndel')
     list.appendChild(li)
-    li.appendChild(span)
-    li.appendChild(btnDel)
+    li.append(checkbox, span, btnDel)
     btnDel.onclick = function() {
         list.removeChild(li)
         deleteCb()
     }
+    checkbox.onclick = function() {
+        checkCb()
+    }
+    
 }
 
 function addTaskCat(cat, taskCount) {

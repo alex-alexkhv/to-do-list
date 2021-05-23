@@ -108,6 +108,8 @@ body {
     text-decoration: none;
     top: -3px;
     right: 22px;
+    border: none;
+    background-color: transparent;
 }
 
 .tasks {
@@ -124,10 +126,35 @@ body {
     margin-top: 10px;
 }
 
-.tasks input {
-    float: right;
-}
-
 .icon-card {
     padding: 25px;
 }
+
+.checkbox {
+    margin: 10px;
+}
+.checkbox:checked + .name-task {
+    text-decoration: line-through;
+}
+
+.btndel {
+
+    height: 40px;
+    width: 40px;
+    float: right;
+    background: url(/icons/trash.svg);
+    background-size: cover;
+    border: none;
+}
+
+/* .name-task {
+    
+} */
+
+
+/* icon: "icons/house.svg" */
+
+/* background-image: url(images/bg.jpg); /* Путь к фоновому изображению */
+/* background-color: #c7b39b; /* Цвет фона */
+
+/* no-repeat */
