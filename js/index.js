@@ -26,6 +26,6 @@ for (let i = 0; i < cats.length; i++) {
 }
 const li = addTaskCat({catName: "Все", key: "all"}, summ)
 cardList.prepend(li)
-console.log(li)
+// console.log(li)
 
 
