@@ -4,32 +4,32 @@ const nameCategory = urlParams.get('name');
 const dictionary = {
     work: {
         header: "Задачи по работе",
-        icon: "icons/work.svg"
+        icon: "/icons/work.svg"
     },
     musik: {
         header: "Задачи по музыке",
 
-        icon: "icons/musik.svg"
+        icon: "/icons/musik.svg"
     },
 
     study: {
         header: "Задачи по обучению",
-        icon: "icons/study.svg"
+        icon: "/icons/study.svg"
     },
 
     travel: {
         header: "Задачи по путешествиям",
-        icon: "icons/travel.svg"
+        icon: "/icons/travel.svg"
     },
 
     house: {
         header: "Задачи по дому",
 
-        icon: "icons/house.svg"
+        icon: "/icons/house.svg"
     },
     all: {
         header: "Все задачи",
-        icon: "icons/all.svg"
+        icon: "/icons/all.svg"
     },
 
 }
@@ -38,7 +38,7 @@ const nameHeader = document.getElementById("header") // имя заголовк�
 nameHeader.innerText = dictionary[nameCategory]?.header || "Задачи"
 
 const nameIcon = document.getElementById("icon-card") // урээл иконки текущей категории
-nameIcon.src = dictionary[nameCategory]?.icon || "icons/all.svg"
+nameIcon.src = dictionary[nameCategory]?.icon || "/icons/all.svg"
 
 
 
